@@ -1,0 +1,438 @@
+/* header */
+/* nav bar */
+.header {
+    height: 0;
+    width: 92%;
+    padding: 0 8%;
+    color: orange;
+    font-size: 24px;
+    position: relative;
+
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+}
+
+.nav-links {
+    padding: 2% 0;
+}
+
+.nav-links>li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.nav-links>li>a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-links>li>a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fea429;
+    transition: width 1s;
+}
+
+.nav-links>li>a:hover::after {
+    width: 100%;
+}
+
+.menu {
+    display: none;
+}
+
+/* Menu bar */
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+@media (max-width: 850px) {
+    .menu {
+        display: block;
+    }
+
+    .menu.active .bar:nth-child(2) {
+        opacity: 0%;
+    }
+
+    .menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+
+    .menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: absolute;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .item {
+        margin: 16px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+
+.Blank-box {
+    height: 125px;
+    width: 0;
+    background-color: transparent;
+}
+
+/* header  */
+
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.header-row {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.button {
+    display: inline-block;
+    background: orange;
+    color: white;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+}
+
+.button:hover {
+    transition: ease-in-out;
+    background: blue;
+}
+
+/* Body */
+/* Product card*/
+
+
+.list-product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.product {
+    padding: 20px;
+    width: 30%;
+    margin: 15px;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-top: 10px;
+    transition: 0.3s;
+    background: orange;
+}
+
+
+.product:hover {
+    transform: translate(0, -8px);
+}
+
+.product>h3 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.product>a {
+    text-decoration: none;
+}
+
+.product>img {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.product>p {
+    text-align: center;
+    color: white;
+    padding-top: 0 8px;
+}
+
+.product>h4 {
+    font-size: 30px;
+    text-align: center;
+    color: blue;
+    margin: 0;
+}
+
+.product>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+}
+
+.product>li {
+    padding-top: 5px;
+}
+
+.product>button {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.mua-1 {
+    background: red;
+}
+
+.mua-1:hover {
+    background: blue;
+}
+
+.mua-2 {
+    background: blue;
+}
+
+.mua-2:hover {
+    background: green;
+}
+
+.mua-3 {
+    background: violet;
+}
+
+.mua-3:hover {
+    background: red;
+}
+
+.mua-4 {
+    background: pink;
+}
+
+.mua-4:hover {
+    background: black;
+}
+
+.mua-5 {
+    background: black;
+}
+
+.mua-5:hover {
+    background: red;
+}
+
+.mua-6 {
+    background: green;
+}
+
+.mua-6:hover {
+    background: blue;
+}
+
+@media (max-width: 850px) {
+    .product {
+        width: 80%;
+    }
+}
+
+.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.scrollmenu a:hover {
+    background-color: #777;
+}
+
+/* Footer */
+
+footer {
+    position: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 48px;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: white;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 48px 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: white;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i {
+    font-size: 20px;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 98%;
+    padding: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu {
+    float: right;
+}
+
+.footer-menu ul {
+    display: flex;
+}
+
+.footer-menu ul li {
+    padding-right: 10px;
+    display: block;
+}
+
+.footer-menu ul li a {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: orange;
+}
+
+#contact {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#contact:hover{
+    color: orange;
+}
+@media (max-width: 850px) {
+    .footer-menu ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
